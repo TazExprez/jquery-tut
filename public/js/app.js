@@ -506,16 +506,134 @@
 
 // Joe's answers to the test your skills in manipulating exercise.  The index5.html and main5.scss files deal with this.
 
-$(function () {
-  $(".btn1").on("click", function () {
-    $(".box1").addClass("active");
-  });
+// $(function () {
+//   $(".btn1").on("click", function () {
+//     $(".box1").addClass("active");
+//   });
 
-  $(".box2 button").on("click", function () {
-    // You did not have to specify input[type='text'] and could have just wrote input, because there is only one input element in .box2, but Joe felt like being fancy.
-    var value = $(".box2 input[type='text']").val();
-    $(".box2").append(
-      "<span>This field has " + value.length + " characters!</span>"
-    );
+//   $(".box2 button").on("click", function () {
+// You did not have to specify input[type='text'] and could have just wrote input, because there is only one input element in .box2, but Joe felt like being fancy.
+//     var value = $(".box2 input[type='text']").val();
+//     $(".box2").append(
+//       "<span>This field has " + value.length + " characters!</span>"
+//     );
+//   });
+// });
+
+// New lesson starts here.
+
+// $(function () {
+// console.log($(".first-p").parent());
+// console.log($(".box1").children());
+//   $(".box1").children().css({
+//     background: "blue",
+//     display: "inline-block",
+//     padding: "20px",
+//     margin: "20px",
+//     color: "white"
+//   });
+
+//   $("p").each(function () {
+//     console.log(this);
+//     $(this).css({
+//       background: "yellow"
+//     });
+//   });
+
+//   $("ul li").first().css({
+//     background: "green"
+//   });
+// });
+
+// New lesson starts here.
+
+// $(function () {
+//   $(".btn").on("click", function () {
+//     var request = $.ajax({
+// url: "https://jsonplaceholder.typicode.com/posts1",
+// url: "http://www.google.com",
+// method: "GET"
+// data: { id: menuId },
+// dataType: "html"
+//     });
+
+//     request.done(function (data) {
+//       console.log(data);
+//     });
+
+//     request.fail(function (jqXHR, textStatus, error) {
+//       alert("Request failed: " + textStatus + " " + error);
+//     });
+//   });
+// });
+
+// New lesson starts here.
+
+// $(function () {
+//   $(".btn").on("click", function () {
+//     var request = $.ajax({
+// url: "http://www.google.com",
+// method: "POST",
+// data: {
+//   username: "menuId",
+//   password: "password"
+//       url: "https://jsonplaceholder.typicode.com/posts",
+//       method: "POST",
+//       data: {
+//         title: "Top 10 Best Places to Live",
+//         body:
+//           "The type of data that you're expecting back from the server. If none is specified, jQuery will try to infer it based on the MIME type of the response (an XML MIME type will yield XML, in 1.4 JSON will yield a JavaScript object, in 1.4 script will execute the script, and anything else will be returned as a string). The available types (and the result passed as the first argument to your success callback) are.",
+//         userId: 20
+//       }
+//       // dataType: "html"
+//     });
+//     request.done(function (data) {
+//       console.log(data);
+//     });
+//     request.fail(function (jqXHR, testStatus, error) {
+//       alert("Request failed: " + textStatus + error);
+//     });
+//   });
+// });
+
+// New lesson starts here.
+
+// $(function () {
+//   $(".btn").on("click", function () {
+//     var request = $.ajax({
+//       // url: "http://jsonplaceholder.typicode.com/posts",
+//       url: "http://jsonplaceholder.typicode.com/posts/1",
+//       method: "PUT",
+//       data: {
+//         // title: "Top 10 Best Places to Live",
+//         title: "Top 5 Best Cities to Live",
+//         body:
+//           "The type of data that you're expecting back from the server. If none is specified, jQuery will try to infer it based on the MIME type of the response (an XML MIME type will yield XML, in 1.4 JSON will yield a JavaScript object, in 1.4 script will execute the script, and anything else will be returned as a string). The available types (and the result passed as the first argument to your success callback) are.",
+//         userId: 20
+//       }
+//     });
+//     request.done(function (data) {
+//       console.log(data);
+//     });
+//     request.fail(function (jqXHR, textStatus, error) {
+//       alert("Request failed: " + textStatus + error);
+//     });
+//   });
+// });
+
+// New lesson starts here.
+
+$(function () {
+  $(".btn").on("click", function () {
+    var request = $.ajax({
+      url: "http://jsonplaceholder.typicode.com/posts/1",
+      method: "DELETE"
+    });
+    request.done(function (data) {
+      console.log(data);
+    });
+    request.fail(function (jqXHR, textStatus, error) {
+      alert("Request failed: " + textStatus + error);
+    });
   });
 });
